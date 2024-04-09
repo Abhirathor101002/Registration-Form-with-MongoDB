@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 main">
+                <form action="/sign_up" method="POST">
+                    <center><h2><b>Registration Form</b></h2></center> 
+                    <input type="text" class="box" id="name" name="name" placeholder="Name" required>
+                    <br><br>
+
+                    <input type="text" class="box" id="age" name="age" placeholder="Age" required>
+                    <br><br>
+                    
+                    <input type="email" class="box" id="email" name="email" placeholder="Email" required>
+                    <br><br>
+                    
+                    <input type="tel" class="box" id="phone" name="phone" placeholder="Phone No" required>
+                    <br><br>
+                    
+                    Gender:
+                    <input type="radio" id="male" name="gender" value="male" required> Male
+                    <input type="radio" id="female" name="gender" value="female" required> Female
+                    <br><br>
+
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password"
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,12}$" 
+                        title="Password must contain at least 8 characters, including one alphabet, one number, and one special character." required><br>
+                    <span class="error" id="passwordError"></span><br>
+                    
+                    <input type="submit" class="box" id="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
